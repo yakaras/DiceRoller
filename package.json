@@ -1,0 +1,46 @@
+{
+  "name": "dice-roller",
+  "version": "1.0.0",
+  "description": "roll two dices",
+  "author": "Johann Uhl",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron app.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist-l": "electron-builder build -l"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.2"
+  },
+  "build": {
+    "appId": "com.iion.dice",
+    "productName": "Dice Roller",
+    "publish": "github",
+    "copyright": "Copyright © 2020 Johann Uhl",
+    "directories": {
+      "output": "build/"
+    },
+    "artifactName": "DiceRoller-${os}-${arch}.${ext}",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "artifactName": "DiceRoller-Windows-${arch}.exe",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true
+    }
+  }
+
+  }
