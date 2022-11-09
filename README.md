@@ -11,7 +11,3 @@ Run:
 ```shell
 npm start
 ```
-
-Hint:
-You can view the animation just by opening the index.html file.
-Or opening the website https://ara-systems.net/projects/dice-roller/
